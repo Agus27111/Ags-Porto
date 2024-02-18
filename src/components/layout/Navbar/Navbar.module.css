@@ -1,0 +1,36 @@
+/* aside section*/
+.aside {
+  width: 17%;
+  min-height: 100vh;
+}
+.asideText {
+  height: 100vh;
+}
+.nav {
+  font-size: 20px;
+  position: relative;
+  top: 50%;
+  display: flex;
+  height: auto;
+}
+.navItem {
+  transition-property: background-color, padding;
+  transition-duration: var(--def-transition-duration);
+  transition-timing-function: ease-in-out;
+}
+.navItem:hover {
+  background-color: #00afb5;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.bottomList Link:link {
+  transition: all 0.1s;
+}
+.bottomList Link:link:hover {
+  font-size: 1.1rem;
+}
+.navFoot {
+  font-size: 0.6rem;
+  position: relative;
+  bottom: 10px;
+}
