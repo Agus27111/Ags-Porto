@@ -1,24 +1,9 @@
 import React, { useEffect } from "react";
 import styles from "./Works.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { smoothScroll } from "/public/smoothScroll";
 
 function Works() {
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      // Code that accesses document should only run on the client-side
-
-      // Initialize scrollspy
-      const scrollspy = bootstrap.ScrollSpy(document.body, {
-        target: "#accordionFlushExample",
-      });
-      // Initialize accordion
-      const accordions = document.querySelectorAll(".accordion");
-      accordions.forEach((accordion) => {
-        new bootstrap.Accordion(accordion);
-      });
-    }
-  }, []);
   return (
     <>
       <main className="px-3 m-lg-5">
@@ -27,7 +12,7 @@ function Works() {
           <h1 className="text-dark">Recent project</h1>
         </div>
 
-        <div className="row mt-4">
+        <div className={`${styles.accScr} row mt-4`}>
           <div
             className={`${styles.scrollList} accordion accordion-flush col-4  justify-content-between`}
             id="accordionFlushExample"
@@ -45,6 +30,7 @@ function Works() {
                   <a
                     className="list-group-item list-group-item-action"
                     href="#listitem1"
+                    onClick={smoothScroll}
                   >
                     Item 1
                   </a>
@@ -75,6 +61,7 @@ function Works() {
                   <a
                     className="list-group-item list-group-item-action"
                     href="#list-item-2"
+                    onClick={smoothScroll}
                   >
                     Item 2
                   </a>
@@ -106,6 +93,7 @@ function Works() {
                   <a
                     className="list-group-item list-group-item-action"
                     href="#list-item-3"
+                    onClick={smoothScroll}
                   >
                     Item 3
                   </a>
@@ -136,11 +124,11 @@ function Works() {
                   data-bs-target="#flush-collapseFour"
                   aria-expanded="false"
                   aria-controls="flush-collapseFour"
-                  onclick="window.location.href='#list-item-4'"
                 >
                   <a
                     className="list-group-item list-group-item-action"
                     href="#list-item-4"
+                    onClick={smoothScroll}
                   >
                     Item 4
                   </a>
@@ -164,28 +152,29 @@ function Works() {
             <div
               data-bs-spy="scroll"
               data-bs-target="#accordionFlushExample"
-              data-bs-smooth-scroll="true"
+              data-bs-offset="0"
               className={`${styles.scrollSpy} scrollspy-example`}
-              tabindex="0"
+              tabIndex="0"
             >
-              <div id="listitem1">
+              <div id="listitem1" onClick={smoothScroll}>
                 <h4>Item 1</h4>
                 <img src="../aguss.png" alt="" />
               </div>
-              <div id="list-item-2">
+              <div id="list-item-2" onClick={smoothScroll}>
                 <h4>Item 2</h4>
                 <img src="../aguss.png" alt="" />
               </div>
-              <div id="list-item-3">
+              <div id="list-item-3" onClick={smoothScroll}>
                 <h4>Item 3</h4>
                 <img src="../aguss.png" alt="" />
               </div>
-              <div id="list-item-4">
+              <div id="list-item-4" onClick={smoothScroll}>
                 <h4>Item 4</h4>
                 <img src="../aguss.png" alt="" />
               </div>
             </div>
           </div>
+
           <button className="w-25 mx-auto mt-4 rounded-2 p-2">
             More project
           </button>
@@ -267,7 +256,7 @@ function Works() {
                   </text>
                 </svg>
                 <div className="carousel-caption d-none d-md-block">
-                  <div className="card-carousel">
+                  <div className={styles.cardCarousel}>
                     <img src="../aguss.png" alt="" />
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -301,7 +290,7 @@ function Works() {
                   </text>
                 </svg>
                 <div className="carousel-caption d-none d-md-block">
-                  <div className="card-carousel">
+                  <div className={styles.cardCarousel}>
                     <img src="../aguss.png" alt="" />
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.

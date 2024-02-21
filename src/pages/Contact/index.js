@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Contact.module.css";
 
 function Contact() {
   return (
@@ -10,8 +11,8 @@ function Contact() {
           </p>
           <h1 className="text-dark">Reach out me</h1>
         </div>
-        <div className="container d-flex flex-row justify-content-between g-3">
-          <div className="form-contact">
+        <div className="container d-flex flex-column flex-lg-row justify-content-between g-3">
+          <div className={styles.formContact}>
             <form className="row g-3">
               <div className="col-md-6">
                 <label for="inputName" className="form-label">
@@ -51,7 +52,7 @@ function Contact() {
                 <textarea
                   name="text-email"
                   id="emailtext"
-                  cols="45"
+                  cols="40"
                   rows="7"
                 ></textarea>
               </div>
@@ -62,7 +63,7 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div className="google-maps rounded-1 w-60 h-50 ms-4 p-2">
+          <div className="google-maps d-none d-lg-block rounded-1 w-60 h-50 ms-4 p-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.118795002031!2d108.02921497370629!3d-6.6321650648307235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e692cdba20d894b%3A0x1a2f695ac737f86d!2sSMP%20Negeri%204%20Terisi!5e0!3m2!1sid!2sid!4v1706383818746!5m2!1sid!2sid"
               width="600"

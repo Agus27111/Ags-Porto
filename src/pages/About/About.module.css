@@ -5,8 +5,17 @@
 .leftContainer {
   width: 40%;
 }
+.emails {
+  font-size: 0.83rem;
+}
+.boxAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .gradientText {
-  background-image: var(--gradient-3);
+  background-image: var(--gradient);
   /* This will show the gradient as a text color rather than element bg. */
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,4 +71,20 @@
 .btn-about:hover {
   background-color: var(--gradient-2);
   color: whitesmoke;
+}
+@media (max-width: 768px) {
+  .rightContainer {
+    width: 100%;
+  }
+  .leftContainer {
+    width: 100%;
+  }
+  .boxImg {
+    width: 100%;
+  }
+  .myexLeft {
+    text-align: justify;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
 }

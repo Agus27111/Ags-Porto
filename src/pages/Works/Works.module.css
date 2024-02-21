@@ -1,4 +1,7 @@
 /* Works section */
+.accScr {
+  width: 1000px;
+}
 .scrollList {
   height: 40vh;
 }

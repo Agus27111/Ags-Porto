@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --gradient: linear-gradient(-145deg, #00afb5 20.37%, #00477733 57.73%);
+  --gradient: linear-gradient(-190deg, #00afb5 50.37%, #2a7cf733 80.73%);
   --gradient-2: #2c2d2f;
   --def-transition-duration: 0.2s;
 }

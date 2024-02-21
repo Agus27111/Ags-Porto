@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
+import Image from "next/image";
 async function fetchRandomQuote() {
   try {
     const response = await fetch("https://api.quotable.io/random");
@@ -28,24 +29,27 @@ startAutoRefresh();
 function About() {
   return (
     <>
-      <main className="px-5 me-5">
+      <main className="me-5 px-lg-5 px-1">
         <div className="welcome mt-5">
           <p>Nice to meet you!</p>
-          <h1 className="text-dark">Welcome to...</h1>
+          <h1 className="text-dark">Welcome to my page</h1>
         </div>
-        <div className="d-flex flex-row mt-5">
-          <div className={styles.leftContainer}>
-            <div className="about">
-              <div className="box-img position-relative">
-                <img src="./young-man.png" alt="" className="img-about" />
+        <div className="container d-flex flex-column flex-lg-row">
+          <div
+            className={`${styles.leftContainer} flex flex-column align-items-center`}
+          >
+            <div className={styles.boxAbout}>
+              <div className="position-relative">
+                <img
+                  src="/young-man.png"
+                  alt="youngman"
+                  className={styles.boxImg}
+                  width={400}
+                  height={250}
+                />
               </div>
-              <div className={`${styles.boxText} text-center `}>
-                <h1 className={`${styles.gradientText} mt-5 `}>
-                  Agus Setiawan
-                </h1>
-                <p>
-                  <span>Web Developper</span> based in <span>Indonesia</span>
-                </p>
+              <div className={`${styles.boxText} text-center mt-5`}>
+                <h1 className={`${styles.gradientText}`}>Agus Setiawan</h1>
                 <a href="" className={styles.myCv}>
                   Download My CV{" "}
                   <i className="bi bi-arrow-down-square-fill"></i>
@@ -54,14 +58,14 @@ function About() {
             </div>
           </div>
           <div className={`container ${styles.rightContainer}`}>
-            <div className="row row-cols-2">
-              <div className="col">
+            <div className="row row-cols-lg-2 row-cols-1">
+              <div className="col mt-5 mt-lg-0">
                 <p>
                   <i className="bi bi-telephone-forward-fill me-2"></i> +62
                   878-2236-8008
                 </p>
-                <p>
-                  <i className="bi bi-envelope-arrow-down-fill me-2"></i>
+                <p className={styles.emails}>
+                  <i className="bi bi-envelope-arrow-down-fill me-2"></i>{" "}
                   agussetiawanphy3@gmail.com
                 </p>
               </div>
@@ -74,7 +78,6 @@ function About() {
                   Indramayu
                 </p>
               </div>
-
               <div className="col mt-5">
                 <div className="mb-4">
                   <h1 className="float-start me-2">10+</h1>
@@ -94,16 +97,16 @@ function About() {
                 </div>
                 <div>
                   <p>
-                    With 10+ years experience as a professional a graphic
+                    With 10+ years of experience as a professional graphic
                     designer, I have acquired the skills and knowledge necessary
                     to make your project a success.
                   </p>
                 </div>
               </div>
               <div
-                className={`${styles.api} col col-12 d-flex flex-row align-content-center justify-content-center p-2 rounded-1`}
+                className={`${styles.api} col col-12 d-flex flex-row align-content-center justify-content-center p-2 rounded-1 w-100`}
               >
-                <div className={`${styles.quoteIcon} ms-3 `}>
+                <div className={`${styles.quoteIcon} ms-3`}>
                   <i className="bi bi-quote"></i>
                 </div>
                 <div className={`${styles.quoteText} quote-text`}>
@@ -114,10 +117,10 @@ function About() {
           </div>
         </div>
         <div className={`${styles.myExperience} mt-4 mb-4 rounded-1`}>
-          <div className="d-flex flex-row justify-content-around">
-            <div className={`${styles.myexLeft} ms-4 `}>
+          <div className="d-flex flex-lg-row flex-column justify-content-around">
+            <div className={`${styles.myexLeft} ms-4`}>
               <p>Experience</p>
-              <h2>My experience</h2>
+              <h2>My Experience</h2>
               <p className="mt-2">
                 Hello there! My name is Agus Setiawan. I am a web designer &
                 developer, and I'm very passionate and dedicated to my work.
@@ -154,7 +157,7 @@ function About() {
                   <p>-2023 - Present</p>
                   <p className="link-light">-Freelance</p>
                 </div>
-                <h3>Front End Dev</h3>
+                <h3>Front End Developer</h3>
                 <hr />
               </div>
             </div>

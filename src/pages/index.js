@@ -20,9 +20,13 @@ export default function Home() {
         />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className="hero d-lg-flex justify-content-around align-items-center position-lg-relative mt-5">
-          <div className={`${styles.heroText} position-lg-relative`}>
-            <h1 className="z-2">My name is Agus Setiawan...</h1>
+        <div className="hero d-lg-flex justify-content-center align-items-center position-lg-relative mt-5 flex-col-reverse flex-lg-row">
+          <div
+            className={`${styles.heroText} position-lg-relative sm text-lg-start`}
+          >
+            <h1 className={`z-2 ${styles.names}`}>
+              My name is Agus Setiawan...
+            </h1>
             <p id="typing" className={styles.typing}>
               Web Developer based in Indonesia
             </p>
@@ -31,7 +35,9 @@ export default function Home() {
             </Button>{" "}
           </div>
 
-          <div className={`${styles.heroImg} position-relative`}>
+          <div
+            className={`${styles.heroImg} position-relative d-none d-lg-block`}
+          >
             <Image src={"/aguss.png"} alt="hero" width={500} height={500} />
           </div>
         </div>

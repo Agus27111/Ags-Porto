@@ -11,6 +11,9 @@
   width: 0;
   height: 0;
 }
+.names {
+  line-height: 90%;
+}
 .heroText {
   color: #141313;
   font-family: "IBM Plex Sans";
@@ -19,7 +22,7 @@
   font-weight: 700;
   line-height: 2rem;
   letter-spacing: -0.06rem;
-  width: 40%;
+  width: 80%;
 }
 .heroText svg {
   left: -7rem;
@@ -64,4 +67,21 @@
 .whatsapp a:hover {
   color: var(--gradient-2);
 }
-/* floating icon */
+
+/* Your custom CSS file */
+@media (max-width: 768px) {
+  .main {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .heroText {
+    text-align: center;
+  }
+}
