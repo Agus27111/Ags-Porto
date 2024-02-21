@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import Link from "next/link";
-
+import clsx from "clsx";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
@@ -12,14 +12,17 @@ function Navbar() {
       >
         <div className="text-nav p-3 h-100 d-flex flex-column justify-content-between">
           <div className="asideText">
-            <Link href="/" className="d-flex text-white text-decoration-none">
+            <Link
+              href="/"
+              className={clsx("d-flex text-white text-decoration-none")}
+            >
               <span className="fs-1">Ag.</span>
             </Link>
             <div
               className={`${styles.nav} w-100 flex flex-column justify-content-center`}
             >
               <div className="flex flex-column column-gap-2 justify-content-center align-items-center mt-5 position-relative">
-                <div className={`${styles.navItem} `}>
+                <div className={clsx(`${styles.navItem}`)}>
                   <Link
                     href="/"
                     className={`${styles.navLink} text-white d-flex flex-row `}
@@ -28,7 +31,7 @@ function Navbar() {
                     <p className="d-none d-md-block d-lg-block ">HOME</p>
                   </Link>
                 </div>
-                <div className={`${styles.navItem} `}>
+                <div className={clsx(`${styles.navItem}`)}>
                   <Link
                     href="/About"
                     className={`${styles.navLink} text-white d-flex flex-row`}
@@ -37,7 +40,7 @@ function Navbar() {
                     <p className="d-none d-md-block d-lg-block">ABOUT</p>
                   </Link>
                 </div>
-                <div className={`${styles.navItem} `}>
+                <div className={clsx(`${styles.navItem}`)}>
                   <Link
                     href="/Works"
                     className={`${styles.navLink} text-white d-flex flex-row `}
@@ -46,7 +49,7 @@ function Navbar() {
                     <p className="d-none d-md-block d-lg-block">WORKS</p>
                   </Link>
                 </div>
-                <div className={`${styles.navItem} `}>
+                <div className={clsx(`${styles.navItem}`)}>
                   <Link
                     href="/Contact"
                     className={`${styles.navLink} text-white d-flex flex-row`}
