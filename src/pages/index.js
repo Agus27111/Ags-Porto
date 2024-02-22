@@ -30,7 +30,11 @@ export default function Home() {
             <p id="typing" className={styles.typing}>
               Web Developer based in Indonesia
             </p>
-            <Button variant="primary" className={`${styles.btnHero} btn mb-3`}>
+            <Button
+              variant="primary"
+              href="/Contact"
+              className={`${styles.btnHero}  btn mb-3`}
+            >
               Let’s talk with me
             </Button>{" "}
           </div>

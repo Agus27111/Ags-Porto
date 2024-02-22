@@ -1,9 +1,20 @@
 import React, { useEffect } from "react";
 import styles from "./Works.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { smoothScroll } from "/public/smoothScroll";
+import { smoothScroll } from "../../../public/smoothScroll";
 
 function Works() {
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js")
+      .then(() => {
+        // Bootstrap's JavaScript bundle has been loaded successfully
+        // You can initialize Bootstrap components here if needed
+      })
+      .catch((error) => {
+        console.error("Error loading Bootstrap's JavaScript bundle:", error);
+      });
+  }, []);
+
   return (
     <>
       <main className="px-3 m-lg-5">
@@ -27,18 +38,13 @@ function Works() {
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  <a
-                    className="list-group-item list-group-item-action"
-                    href="#listitem1"
-                    onClick={smoothScroll}
-                  >
-                    Item 1
-                  </a>
+                  Item 1
                 </button>
               </h2>
               <div
                 id="flush-collapseOne"
                 className="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
@@ -48,6 +54,7 @@ function Works() {
                 </div>
               </div>
             </div>
+
             <div className="accordion-item">
               <h2 className="accordion-header">
                 <button

@@ -2,7 +2,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import FloatIcon from "@/components/layout/FloatIcon";
 import Navbar from "@/components/layout/Navbar";

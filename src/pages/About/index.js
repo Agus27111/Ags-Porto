@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
-import Image from "next/image";
+
 async function fetchRandomQuote() {
   try {
     const response = await fetch("https://api.quotable.io/random");
@@ -50,7 +50,11 @@ function About() {
               </div>
               <div className={`${styles.boxText} text-center mt-5`}>
                 <h1 className={`${styles.gradientText}`}>Agus Setiawan</h1>
-                <a href="" className={styles.myCv}>
+                <a
+                  href="/public/CV-AgusS(eng).pdf"
+                  download={"CV-AgusS(eng).pdf"}
+                  className={styles.myCv}
+                >
                   Download My CV{" "}
                   <i className="bi bi-arrow-down-square-fill"></i>
                 </a>
